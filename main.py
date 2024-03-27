@@ -31,15 +31,3 @@ async def on_ready():
     await client.change_presence(status=discord.Status.Online)
 
 client.run(settings['TOKEN'])
-
-#bot_logic
-import random
-
-def gen_pass(pass_length):
-    elements = "+-/*!&$#?=@<>"
-    password = ""
-
-    for i in range(pass_length):
-        password += random.choice(elements)
-
-    return password
